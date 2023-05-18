@@ -6,6 +6,9 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+import { getAuth } from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyC77-CFdFRawXid-CIvPfKLS1fF3k7jnwQ",
   authDomain: "whatsapp-e69e0.firebaseapp.com",
@@ -16,6 +19,8 @@ const firebaseConfig = {
   measurementId: "G-DT8DT8JK0F"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase 
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth()
 const analytics = getAnalytics(app);
+
