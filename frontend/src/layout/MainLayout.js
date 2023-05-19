@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Sidebar from '../components/sidebar/Sidebar'
 
 const MainLayout = ({children}) => {
   return (
-    <div>{children}</div>
+    <Fragment>
+        <Sidebar />
+        <div className='flex  h-screen w-full'>
+        {children}
+        </div>
+        
+        </Fragment>
   )
 }
 
